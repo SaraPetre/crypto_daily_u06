@@ -2,6 +2,9 @@
 
 A solo project with 4 moment. Planning, sprint 1, handover and sprint 2.
 
+## Planning
+https://docs.google.com/document/d/16sWO6KkhfXqQ3EMUyhdAViWXFmrrSJecTuYik7u4_lA/edit
+
 ## Getting started
 
 To make it easy for you to get started with GitLab, here's a list of recommended next steps.
