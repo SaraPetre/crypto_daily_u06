@@ -9,8 +9,7 @@ print(f.renderText('Its all about crypto now'))
 
 
 
-# create database object to connect to
-# the database DB_coins.db
+
 ##database= sqlite3.connect("DB_coins.db")
 # create the cursor object
 ##cur = database.cursor()
@@ -23,7 +22,6 @@ print(f.renderText('Its all about crypto now'))
 # print(cur.fetchall())
 
 def select_from_DB():
-
     conn = sqlite3.connect("DB_coins.db", isolation_level=None,
                         detect_types=sqlite3.PARSE_COLNAMES)
     db_df = pd.read_sql_query("SELECT * FROM coins", conn)
