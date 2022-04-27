@@ -1,24 +1,31 @@
 # Run the script to download data from the cryptcoin-API "CoinGecko"
 # into the creatad data base "DB_coins.db".
 import requests, sqlite3
-database = sqlite3.connect("DB_coins.db")
-cur = database.cursor()
 
-url= "https://api.coingecko.com/api/v3/coins/markets?vs_currency=USD&order=market_cap_desc&per_page=2&page=1&sparkline=false&price_change_percentage=1h%2C24h%2C7d"
+def download_to_DB():
+        database = sqlite3.connect("DB_coins.db")
+        cur = database.cursor()
 
-data = requests.get(url)
-data = data.json()
-print(data)
+        url= "https://api.coingecko.com/api/v3/coins/markets?vs_currency=USD&order=market_cap_desc&per_page=10&page=1&sparkline=false&price_change_percentage=1h%2C24h%2C7d"
 
-for c in data:
-        id_coin = c["id"]
-        name = c["name"]
-        symbol=c["symbol"]
-        price=c["current_price"]
-        price_percent_change_1h = c["price_change_percentage_1h_in_currency"]
-        price_percent_change_24h=c["price_change_percentage_24h_in_currency"]
-        price_percent_change_7d=c["price_change_percentage_7d_in_currency"]
+        data = requests.get(url)
+        data = data.json()
+        print(data)
 
-        val = (id_coin, name, symbol,price, price_percent_change_1h, price_percent_change_24h, price_percent_change_7d)
-        cur.execute('''INSERT OR IGNORE INTO coins VALUES(?,?,?,?,?,?,?)''',val)
-database.commit()
+        for c in data:
+                name = c["name"]
+                symbol=c["symbol"]
+                price_USD=c["current_price"]
+                change_1h_percent = c["price_change_percentage_1h_in_currency"]
+                change_24h_percent=c["price_change_percentage_24h_in_currency"]
+                change_7d_percent=c["price_change_percentage_7d_in_currency"]
+                last_updated=c["last_updated"]
+                val = (name, symbol,price_USD, change_1h_percent, change_24h_percent, change_7d_percent,last_updated)
+                cur.execute('''INSERT OR IGNORE INTO coins VALUES(?,?,?,?,?,?,?)''',(val))
+                #cur.execute('''UPDATE coins SET last_updated = (?)''', (last_updated,))
+                cur.fetchall
+                # print (cur)
+
+        database.commit()
+        database.close()
+download_to_DB()

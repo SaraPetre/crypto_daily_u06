@@ -1,4 +1,6 @@
 # crypto_daily_u06
+https://gitlab.com/SaraPetre/crypto_daily_u06
+https://docs.google.com/document/d/16sWO6KkhfXqQ3EMUyhdAViWXFmrrSJecTuYik7u4_lA/edit#
 
 A solo project with 4 moment. Planning, sprint 1, handover and sprint 2.
 

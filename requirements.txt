@@ -1,5 +1,8 @@
 pip install sqlite3
+pip install prettytable
 docker run -d -p 1025:1025 -p 8025:8025 mailhog/mailhog
+# Lägga in länk och val att installera SQlite i Browser
+
 
 # To install programs to be able to run mailhog
 sudo apt-get -y install golang-go
