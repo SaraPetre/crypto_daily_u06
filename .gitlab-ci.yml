@@ -13,26 +13,25 @@ stages:
 
 .some-script-before: &some-script-before
     - python --version  # For debugging
-    - pip install -r requirements.txt
 
 "Ensure PEP8-compliancy":
   stage: code_quality
   before_script:
     - *some-script-before
   script:
-    - pycodestyle --ignore=E501 src/*.py
+    - python3 -m pycodestyle --ignore=E501 src/*.py
 
 "Lint code with pylint":
   stage: code_quality
   before_script:
     - *some-script-before
   script:
-    - pylint --ignore=E501 src/*.py
+    - python3 -m pylint --ignore=E501 src/*.py
 
 "Run flake8":
   stage: code_quality
   before_script:
     - *some-script-before
   script:
-      flake8 --ignore=E501 src/*.py
+      python3 -m flake8 --ignore=E501 src/*.py
 
