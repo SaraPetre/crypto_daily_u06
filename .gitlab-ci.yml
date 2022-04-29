@@ -12,26 +12,26 @@ stages:
 
 
 .some-script-before: &some-script-before
-    - python --version  # For debugging
+    - python3 --version  # For debugging
 
 "Ensure PEP8-compliancy":
   stage: code_quality
   before_script:
     - *some-script-before
   script:
-    - python3 -m pycodestyle --ignore=E501 src/*.py
+    - /usr/lib/python3/dist-packages pycodestyle --ignore=E501 aras_all_in_one_.py
 
 "Lint code with pylint":
   stage: code_quality
   before_script:
     - *some-script-before
   script:
-    - python3 -m pylint --ignore=E501 src/*.py
+    - /usr/lib/python3/dist-packages pylint --ignore=E501 aras_all_in_one_.py
 
 "Run flake8":
   stage: code_quality
   before_script:
     - *some-script-before
   script:
-      python3 -m flake8 --ignore=E501 src/*.py
+    - /usr/lib/python3/dist-packages flake8 --ignore=E501 aras_all_in_one_.py
 
