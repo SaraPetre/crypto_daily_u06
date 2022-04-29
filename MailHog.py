@@ -4,7 +4,7 @@ import pandas as pd
 from pyfiglet import Figlet
  # import sqlite3 module
 import sqlite3
-
+from tabulate import tabulate
 
 def mailhog():
     f = Figlet(font='slant')
@@ -14,11 +14,12 @@ def mailhog():
     # the database DB_coins.db
     conn = sqlite3.connect("DB_coins.db", isolation_level=None,
                         detect_types=sqlite3.PARSE_COLNAMES)
-    db_df = pd.read_sql_query("SELECT * FROM coins", conn)
-    db_df.to_csv('database.csv', index=False)
-    #db_df=db_df[1:]
-    URL=db_df
-    print(db_df.to_string())
+    db_df = pd.read_sql_query("SELECT name 'Name', symbol 'Symbol',price_USD 'Price(USD)', change_1h_percent '1h %', change_24h_percent '24h %', change_7d_percent '7 day %',last_updated 'Last update' FROM coins", conn)
+    df=pd.DataFrame(db_df)
+    pdtabulate= lambda df:tabulate(df,headers = 'keys', tablefmt = 'rst', showindex=False )
+    URL=pdtabulate(df)
+    print(pdtabulate(df))
+
 
     From_addr= "aras@test.test"
     to_addr ="test@to.to"

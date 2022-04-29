@@ -1,4 +1,4 @@
-# This is the file to run for the user. It contains all the steps needed in this project.
+# This is the file to run for the user. It contains all the steps needed in this project.  
 from pyfiglet import Figlet
 f = Figlet(font='slant')
 print(f.renderText('Its all about crypto now'))
@@ -12,6 +12,7 @@ def meny(): # Main steps
     print('|         2. Download data from API, CoinGecko into database              |')
     print('|         3. Select the wanted data, create a csv-file                    |')
     print('|         4. Send a Mail with crypto report of the top 10 crypto.         |')
+    print('|         5. End this application!                                        |')
     print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
 
 # meny()
@@ -48,5 +49,9 @@ while True:
         print()
         from MailHog import mailhog
         #mailhog()
-        print("\n\nThe report have been sent! \n\nCheck out the MailHog mail for the report! You can click the down below link to open the mail in your browser.")
-       # print("http://localhost:8025/")
+        print("\n\nThe abowe report have been sent! \n\nCheck out the MailHog mail for the report! You can click and follow the down below link to open the mail in your browser.")
+        print("http://localhost:8025/")
+    if choice == 5: # End this application.
+        print(u"\u001b[2J")
+        print("The application have been shut down!\n\n\n")
+        break

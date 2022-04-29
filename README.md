@@ -69,6 +69,21 @@ On some READMEs, you may see small images that convey metadata, such as whether 
 Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
 
 ## Installation
+# Install browser for visual image of sqlite
+https://sqlitebrowser.org/dl/
+# Install Docker desktop
+https://www.docker.com/products/docker-desktop/
+# Start MailHog by Docker. Run in terminal:
+docker run -d -p 1025:1025 -p 8025:8025 mailhog/mailhog
+
+# OR
+
+# Run by starting from the Docker, and Docker compose -file. You need to be in the same folder as the Docker and Docker Compose -files.
+# If it is the first time
+docker-compose up -d --build
+# Then you can use:
+docker-compose up -d
+
 Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
 
 ## Usage
