@@ -1,27 +1,7 @@
-pip install sqlite3
-pip install prettytable  # Kan troligtvis tas bort om jag inte väljer den utskriften på table.
-
-docker run -d -p 1025:1025 -p 8025:8025 mailhog/mailhog
-# Lägga in länk och val att installera SQlite i Browser
-
-
-# To install programs to be able to run mailhog
-sudo apt-get -y install golang-go
-sudo apt-get install git
-go get github.com/mailhog/MailHog
-# To start MilHog in terminal run:
-~/go/bin/MailHog
-
-
-#Tveksam om nedan behövs.
-go get github.com/mailhog/mhsendmail
-
-#Dock verkar dessa behövas
-wget https://github.com/mailhog/mhsendmail/releases/download/v0.2.0/mhsendmail_linux_amd64
-# Ändra till executable
-sudo chmod +x mhsendmail_linux_amd64
-# Flytta filen till local/bin:
-sudo mv mhsendmail_linux_amd64 /usr/local/bin/mhsendmail
-
-# För att provskicka ett mail via terminal (OBS! POWERSHELL)
-Send-MailMessage -To "test@mailhog.local" -From "ssra@petre.com" -Subject "Hello, MailHog!" -SmtpServer "localhost" -Port 1025
+sqlite3
+pytest
+requests
+pylint
+autopep8
+pytest-cov
+flake8
