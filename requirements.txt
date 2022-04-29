@@ -1,4 +1,6 @@
-
+pandas
+pyfiglet
+tabulate
 pytest
 requests
 pylint
