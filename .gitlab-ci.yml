@@ -27,7 +27,7 @@ stages:
   before_script:
     - *some-script-before
   script:
-    - pylint --ignore=C0301 aras_all_in_one_.py
+    - pylint --disable=C0301 aras_all_in_one_.py
 
 "Run flake8":
   stage: code_quality
