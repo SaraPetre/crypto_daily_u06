@@ -24,7 +24,6 @@ def mailhog():
 
     def pdtabulate(df_d):
         return tabulate(df_d, headers='keys', tablefmt='rst', showindex=False)
-    # pdtabulate = lambda df_d: tabulate(df_d, headers='keys', tablefmt='rst', showindex=False)
     url = pdtabulate(df_create_table)
     print(pdtabulate(df_create_table))
 
