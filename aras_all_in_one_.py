@@ -38,7 +38,7 @@ def create_table(conn, sql_create_coins_table):
         c_c.execute(sql_create_coins_table)
     except Error as err:
         print(err)
-    
+
 
 def main():
     """
