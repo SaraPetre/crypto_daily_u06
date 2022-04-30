@@ -56,7 +56,7 @@ When you're ready to make this README your own, just edit this file and use the 
 ## Suggestions for a good README
 Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
 
-## Name
+## It´s all about crypto now- application to get the top10 crypto coins fron API
 Choose a self-explaining name for your project.
 
 ## Description
@@ -69,6 +69,8 @@ On some READMEs, you may see small images that convey metadata, such as whether 
 Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
 
 ## Installation
+# Install the requirement needed
+pip install -r requirements.txt
 # Install browser for visual image of sqlite
 https://sqlitebrowser.org/dl/
 # Install Docker desktop
@@ -76,7 +78,7 @@ https://www.docker.com/products/docker-desktop/
 # Start MailHog by Docker. Run in terminal:
 docker run -d -p 1025:1025 -p 8025:8025 mailhog/mailhog
 
-# OR
+## OR
 
 # Run by starting from the Docker, and Docker compose -file. You need to be in the same folder as the Docker and Docker Compose -files.
 # If it is the first time

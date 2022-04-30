@@ -27,7 +27,7 @@ def create_connection():
     return conn
 
 
-def create_table(conn, aras_created_table_sql):
+def create_table(conn, sql_create_coins_table):
     """ create a table from the create_table_sql statement
     :param conn: Connection object
     :param create_table_sql: a CREATE TABLE statement
@@ -35,10 +35,10 @@ def create_table(conn, aras_created_table_sql):
     """
     try:
         c_c = conn.cursor()
-        c_c.execute(aras_created_table_sql)
+        c_c.execute(sql_create_coins_table)
     except Error as err:
         print(err)
-
+    
 
 def main():
     """
@@ -46,23 +46,6 @@ def main():
     """
     conn = sqlite3.connect("aras_file.db")
 
-    sql_create_projects_table = """ CREATE TABLE IF NOT EXISTS projects (
-                                        id integer PRIMARY KEY,
-                                        name text NOT NULL,
-                                        begin_date text,
-                                        end_date text
-                                    ); """
-
-    sql_create_tasks_table = """CREATE TABLE IF NOT EXISTS tasks (
-                                    id integer PRIMARY KEY,
-                                    name text NOT NULL,
-                                    priority integer,
-                                    status_id integer NOT NULL,
-                                    project_id integer NOT NULL,
-                                    begin_date text NOT NULL,
-                                    end_date text NOT NULL,
-                                    FOREIGN KEY (project_id) REFERENCES projects (id)
-                                );"""
     sql_create_coins_table = """CREATE TABLE IF NOT EXISTS coins (
                                     "name" text UNIQUE,
                                     "symbol" text UNIQUE,
@@ -78,15 +61,8 @@ def main():
 
     # create tables
     if conn is not None:
-        # create projects table
-        create_table(conn, sql_create_projects_table)
-
-        # create tasks table
-        create_table(conn, sql_create_tasks_table)
-
         # create coin table
         create_table(conn, sql_create_coins_table)
-
         # run the download_to_db
         download_to_db()
         # run update_values

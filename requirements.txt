@@ -1,3 +1,4 @@
+smtplib
 pandas
 pyfiglet
 tabulate
