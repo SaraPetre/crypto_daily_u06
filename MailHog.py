@@ -17,7 +17,7 @@ def mailhog():
     print(f_f.renderText('Its all about crypto now!'))
     url_figlet = (f_f.renderText("Its all about crypto now!"))
     # create database object to connect
-    # the database DB_coins.db
+    # the database db_coins.db
     conn = sqlite3.connect("db_coins.db", isolation_level=None, detect_types=sqlite3.PARSE_COLNAMES)
     db_df = pd.read_sql_query("SELECT name 'Name', symbol 'Symbol',price_usd 'Price(USD)', change_1h_percent '1h %', change_24h_percent '24h %', change_7d_percent '7 day %',last_updated 'Last update' FROM coins", conn)
     df_create_table = pd.DataFrame(db_df)

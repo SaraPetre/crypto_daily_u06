@@ -85,7 +85,6 @@ def download_to_db():
 
     data = requests.get(url)
     data = data.json()
-    # print(data)
     for coin in data:
         name = coin["name"]
         symbol = coin["symbol"]
@@ -97,10 +96,8 @@ def download_to_db():
         val = (name, symbol, price_usd, change_1h_percent, change_24h_percent, change_7d_percent, last_updated)
         data = cur.execute('''INSERT OR IGNORE INTO coins VALUES(?,?,?,?,?,?,?)''', (val))
         data = cur.fetchall()
-        # print(data)
     database.commit()
     database.close()
-# download_to_db()
 
 
 def update_values():
@@ -114,7 +111,6 @@ def update_values():
 
     data = requests.get(url)
     data = data.json()
-    # print(data)
 
     for coin in data:
         name = coin["name"]
@@ -129,7 +125,6 @@ def update_values():
         data = cur.fetchall()
     database.commit()
     database.close()
-# update_values()
 
 
 def mailhog():
@@ -147,7 +142,6 @@ def mailhog():
 
     def pdtabulate(df_d):
         return tabulate(df_d, headers='keys', tablefmt='rst', showindex=False)
-    # pdtabulate = lambda df_d: tabulate(df_d, headers='keys', tablefmt='rst', showindex=False)
     url = pdtabulate(df_create_table)
     print(pdtabulate(df_create_table))
 
@@ -158,7 +152,6 @@ def mailhog():
     msg = f"From: {from_addr}\r\nSubject: {subject}\r\nTo: {to_addr}\r\n\r\n This is a message from MailHog.py. \n Find down below the daily prices for the top10 crypto coins! \n\n {url_figlet}\n\n{url}."
     server = smtplib.SMTP("localhost:1025")
     server.sendmail(from_addr, to_addr, msg)
-# mailhog()
 
 
 if __name__ == '__main__':

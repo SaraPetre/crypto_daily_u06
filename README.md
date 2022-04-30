@@ -1,39 +1,14 @@
 # Its all about crypto now!
-
-
-
 A solo project with 4 moment. Planning, sprint 1, handover and sprint 2.
-
-
-
-## Getting started
-
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
-
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
-
-## Add your files
-
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
-
-```
-cd existing_repo
-git remote add origin https://gitlab.com/SaraPetre/crypto_daily_u06.git
-git branch -M main
-git push -uf origin main
-```
-
-
-## Test and Deploy
-
-
-***
-
-
-## It´s all about crypto now- application to get the top10 crypto coins from API
+Develop an application to get the top10 crypto coins from API downloaded to a Sqlite database, select the data wanted and send a report by MailHog
 
 ![](https://i.imgur.com/vV68Gs6.png)
+
+## To-do on handover
+- Read this README.md
+- Do the installlation needed to run the application
+- Continue the work according to the plan for sprint 1 in the down below document:
+https://docs.google.com/document/d/16sWO6KkhfXqQ3EMUyhdAViWXFmrrSJecTuYik7u4_lA/edit
 
 ## Repository
 https://gitlab.com/SaraPetre/crypto_daily_u06
@@ -47,8 +22,7 @@ https://docs.google.com/document/d/16sWO6KkhfXqQ3EMUyhdAViWXFmrrSJecTuYik7u4_lA/
 
 <img align="left" alt="Python" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png" />
 
-<img class="logo" src="images/sqlite370_banner.gif" alt="SQLite"
-border="0" />
+<img class="logo"  src="images/sqlite370_banner.gif" alt="SQLite" width="26px" border="0" />
 
 <img src="images/hog.png" height="20" alt="MailHog"/>
 <br />
