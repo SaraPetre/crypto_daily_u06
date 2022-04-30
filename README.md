@@ -1,11 +1,10 @@
-# crypto_daily_u06
-https://gitlab.com/SaraPetre/crypto_daily_u06
-https://docs.google.com/document/d/16sWO6KkhfXqQ3EMUyhdAViWXFmrrSJecTuYik7u4_lA/edit#
+# Its all about crypto now!
+
+
 
 A solo project with 4 moment. Planning, sprint 1, handover and sprint 2.
 
-## Planning
-https://docs.google.com/document/d/16sWO6KkhfXqQ3EMUyhdAViWXFmrrSJecTuYik7u4_lA/edit
+
 
 ## Getting started
 
@@ -25,68 +24,76 @@ git branch -M main
 git push -uf origin main
 ```
 
-## Integrate with your tools
-
-- [ ] [Set up project integrations](https://gitlab.com/SaraPetre/crypto_daily_u06/-/settings/integrations)
-
-## Collaborate with your team
-
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
 
 ## Test and Deploy
 
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
 
 ***
 
-# Editing this README
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!).  Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
+## It´s all about crypto now- application to get the top10 crypto coins from API
 
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+![](https://i.imgur.com/vV68Gs6.png)
 
-## It´s all about crypto now- application to get the top10 crypto coins fron API
-Choose a self-explaining name for your project.
+## Repository
+https://gitlab.com/SaraPetre/crypto_daily_u06
+
+## Planning
+https://docs.google.com/document/d/16sWO6KkhfXqQ3EMUyhdAViWXFmrrSJecTuYik7u4_lA/edit
+
+### Technologies Used
+
+<img align="left" alt="Docker" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/docker/docker.png" />
+
+<img align="left" alt="Python" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png" />
+
+<img class="logo" src="images/sqlite370_banner.gif" alt="SQLite"
+border="0" />
+
+<img src="images/hog.png" height="20" alt="MailHog"/>
+<br />
+<br />
 
 ## Description
 Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
 
 ## Badges
+
 On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
 
 ## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+
+![](https://i.imgur.com/aEorryb.png)
 
 ## Installation
-# Install the requirement needed
-pip install -r requirements.txt
-# Install browser for visual image of sqlite
+### Install the requirement with the following command in your terminal
+>pip install -r requirements.txt
+### Install browser for visual image of sqlite-Optional
 https://sqlitebrowser.org/dl/
-# Install Docker desktop
+### Install Docker desktop - Needed
 https://www.docker.com/products/docker-desktop/
-# Start MailHog by Docker. Run in terminal:
-docker run -d -p 1025:1025 -p 8025:8025 mailhog/mailhog
+### Start MailHog by Docker. Run in terminal:
+>docker run -d -p 1025:1025 -p 8025:8025 mailhog/mailhog
 
-## OR
+##### OR
 
-# Run by starting from the Docker, and Docker compose -file. You need to be in the same folder as the Docker and Docker Compose -files.
-# If it is the first time
-docker-compose up -d --build
-# Then you can use:
-docker-compose up -d
+### Run by starting from the Docker image, and Docker compose -file. You need to be in the same folder as the Docker and Docker Compose -files.
+
+### If it is the first time
+> docker-compose up -d --build
+### Then you can use:
+> docker-compose up -d
 
 Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+## Test by pipeline CI/CD in GitLab
+There are code quality tests set up in the file:
+> docker-compose.yaml
+
+The tests done is:
+> - pycodestyle
+> - pylint 
+> - flake8
+
 
 ## Usage
 Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
