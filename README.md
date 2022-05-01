@@ -10,6 +10,17 @@ A solo project with 4 moment.
 - sprint 2, 3 veeks
 
 After working solo with this project "It´s all about crypto now!" I hand over this project to one of my school team member. This person gets a handover by me and then continue this application according to the planning. Find the planning document down below.
+## Files & folders in this repository
+- README.md
+- .gitignore
+- .gitlab.yml
+- Dockerfile
+- docker-compose.yaml
+- maildir/
+- requirements.txt
+- src/
+    - aras_all_in_one_.py
+    - user_choice_api.py
 
 ## To-do on handover
 - "Fork" this repository.
