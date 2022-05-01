@@ -20,19 +20,19 @@ stages:
   before_script:
     - *some-script-before
   script:
-    - pycodestyle --ignore=E501 aras_all_in_one_.py
+    - pycodestyle --ignore=E501 src/*.py
 
 "Lint code with pylint":
   stage: code_quality
   before_script:
     - *some-script-before
   script:
-    - pylint --disable=C0301 aras_all_in_one_.py
+    - pylint --disable=C0301 --disable=R0801 src/*.py
 
 "Run flake8":
   stage: code_quality
   before_script:
     - *some-script-before
   script:
-    - flake8 --ignore=E501 aras_all_in_one_.py
+    - flake8 --ignore=E501 src/*.py
 
