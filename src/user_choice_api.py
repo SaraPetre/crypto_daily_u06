@@ -3,20 +3,19 @@ and sending a report by MailHog.
 
 """
 import sqlite3
-from sqlite3 import Error
 import smtplib
 import requests
 import pandas as pd
 from pyfiglet import Figlet
 from tabulate import tabulate
 
+
 def meny():
     """
     The choice meny for the user.
     """
-    from pyfiglet import Figlet
-    f = Figlet(font='slant')
-    print(f.renderText('Its all about crypto now'))
+    f_f = Figlet(font='slant')
+    print(f_f.renderText('Its all about crypto now'))
 
     print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
     print('|              WELCOME to this crypto application a la aras!!!            |')
@@ -26,6 +25,7 @@ def meny():
     print('|         4. Send a Mail with crypto report of the top 10 crypto.         |')
     print('|         5. End this application!                                        |')
     print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+
 
 def create_db():
     """
@@ -48,6 +48,7 @@ def create_db():
     # commit and close the database
     database.commit()
     database.close()
+
 
 def download_to_db():
     """
@@ -77,6 +78,7 @@ def download_to_db():
     database.commit()
     database.close()
 
+
 def update_values():
     """
     If there have been changes in the values the down below function will do an update.
@@ -105,7 +107,6 @@ def update_values():
     database.close()
 
 
-
 def select_from_db():
     """
     Select the wanted data from database
@@ -115,17 +116,6 @@ def select_from_db():
     db_df = pd.read_sql_query("SELECT name 'Name' , symbol 'Symbol' , price_USD 'Price(USD)', change_1h_percent '1h %', change_24h_percent '24h %', change_7d_percent '7 day %',last_updated 'Last update'  FROM coins", conn)
     db_df.to_csv('database.csv', index=False)
     print(tabulate(db_df, headers='keys', tablefmt='rst', showindex=False))
-
-
-"""
-This script send an email through MailHog with a report of the Top 10 crypto. To be able to run this script the docker image of mailhog needs to be running.
-Connect by using "docker compose -up -d" in the terminal.
-"""
-import sqlite3
-import smtplib
-import pandas as pd
-from pyfiglet import Figlet
-from tabulate import tabulate
 
 
 def mailhog():
@@ -165,7 +155,7 @@ while True:
         print("\u001b[2J")
         print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
         print("\nYou have created a database with the name db_coins.db and a table named coins. \n\nNow move ahead to step 2!")
-        print()  
+        print()
 
     if choice == 2:  # Create user
         print()
