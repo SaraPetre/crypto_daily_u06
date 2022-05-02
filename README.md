@@ -1,12 +1,31 @@
-# Its all about crypto now!
-A solo project with 4 moment. Planning, sprint 1, handover and sprint 2.
-Develop an application to get the top10 crypto coins from API downloaded to a Sqlite database, select the data wanted and send a report by MailHog
+# ![](https://i.imgur.com/vV68Gs6.png)
 
-![](https://i.imgur.com/vV68Gs6.png)
+>## u06 Soloproject DOE21, Chas Academy
+Develop an application to get the top10 crypto coins from API downloaded to a Sqlite database, select the data wanted and send a report by MailHog. The project is developed in Python.
+
+A solo project with 4 moment. 
+- Planning, 1 week
+- sprint 1, 3 weeks
+- handover, 1 week. 
+- sprint 2, 3 veeks
+
+After working solo with this project "It´s all about crypto now!" I hand over this project to one of my school team member. This person gets a handover by me and then continue this application according to the planning. Find the planning document down below.
+## Files & folders in this repository
+- README.md
+- .gitignore
+- .gitlab.yml
+- Dockerfile
+- docker-compose.yaml
+- maildir/
+- requirements.txt
+- src/
+    - aras_all_in_one_.py
+    - user_choice_api.py
 
 ## To-do on handover
+- "Fork" this repository.
 - Read this README.md
-- Do the installlation needed to run the application
+- Do the installation needed to run the application. Please see "Installation" dow below.
 - Continue the work according to the plan for sprint 1 in the down below document:
 https://docs.google.com/document/d/16sWO6KkhfXqQ3EMUyhdAViWXFmrrSJecTuYik7u4_lA/edit
 
@@ -28,14 +47,8 @@ https://docs.google.com/document/d/16sWO6KkhfXqQ3EMUyhdAViWXFmrrSJecTuYik7u4_lA/
 <br />
 <br />
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
 
-## Badges
-
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
+## Visuals- This is the report that ends up in MailHog
 
 ![](https://i.imgur.com/aEorryb.png)
 
