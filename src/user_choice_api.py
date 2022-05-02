@@ -17,14 +17,15 @@ def meny():
     f_f = Figlet(font='slant')
     print(f_f.renderText('Its all about crypto now'))
 
-    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-    print('|              WELCOME to this crypto application a la aras!!!            |')
-    print('|         1. Create a database in sqlite                                  |')
-    print('|         2. Download data from API, CoinGecko into database              |')
-    print('|         3. Select the wanted data, create a csv-file                    |')
-    print('|         4. Send a Mail with crypto report of the top 10 crypto.         |')
-    print('|         5. End this application!                                        |')
-    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+    print('|                        WELCOME to this crypto application a la aras!!!                         |')
+    print('|         1. Create a database in sqlite                                                         |')
+    print('|         2. Download data from API, CoinGecko into database                                     |')
+    print('|         3. Select the wanted data, create a csv-file                                           |')
+    print('|         4. Send a Mail with crypto report of the top 10 crypto.                                |')
+    print('|         5. Shortcut!! Create a database "aras_file.db" with everything above in one go!        |')   
+    print('|         6. End this application!                                                               |')
+    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
 
 
 def create_db():
@@ -155,6 +156,7 @@ while True:
         print("\u001b[2J")
         print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
         print("\nYou have created a database with the name db_coins.db and a table named coins. \n\nNow move ahead to step 2!")
+        input("Press enter to continue to main menu!")
         print()
 
     if choice == 2:  # Create user
@@ -164,6 +166,7 @@ while True:
         print("\u001b[2J")
         print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
         print("\nYou have downloaded data from API, CoinGecko into database. Great job! \n\nNow move ahead to step 3, please!")
+        input("Press enter to continue to main menu!")
         print()
 
     if choice == 3:  # Select the wanted data, create a csv-file
@@ -181,10 +184,23 @@ while True:
         mailhog()
         print("\u001b[2J")
         print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-        print("\n\nThe abowe report have been sent! \n\nCheck out the MailHog mail for the report! You can click and follow the down below link to open the mail in your browser.")
+        print("\n\nThe report have been sent! \n\nCheck out the MailHog mail for the report! You can click and follow the down below link to open the mail in your browser.\n")
         print("http://localhost:8025/")
+        input("\nPress enter to continue to main menu!")
 
-    if choice == 5:  # End this application.
+    if choice == 5:  #  Shortcut!! Create a database "aras_file.db" with everything above in one go! 
+        print("Shortcut!! Create a database 'aras_file.db' with everything above in one go!")
+        print()
+        from aras_all_in_one_ import *
+        create_connection()
+        main()
+        print("\u001b[2J")
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        print("A database called 'aras_file.db' have been created. \nVisit SQlite in your browser or in your terminal. \nYou will also find a report sent to MailHog.")
+        print("http://localhost:8025/")
+        input("Press enter to continue to main menu!")
+    
+    if choice == 6:  # End this application.
         print("\u001b[2J")
         print("The application have been shut down!\n\n\n")
         break
