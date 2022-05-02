@@ -23,7 +23,7 @@ def meny():
     print('|         2. Download data from API, CoinGecko into database                                     |')
     print('|         3. Select the wanted data, create a csv-file                                           |')
     print('|         4. Send a Mail with crypto report of the top 10 crypto.                                |')
-    print('|         5. Shortcut!! Create a database "aras_file.db" with everything above in one go!        |')   
+    print('|         5. Shortcut!! Create a database "aras_file.db" with everything above in one go!        |')
     print('|         6. End this application!                                                               |')
     print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
 
@@ -188,10 +188,10 @@ while True:
         print("http://localhost:8025/")
         input("\nPress enter to continue to main menu!")
 
-    if choice == 5:  #  Shortcut!! Create a database "aras_file.db" with everything above in one go! 
+    if choice == 5:  # Shortcut!! Create a database "aras_file.db" with everything above in one go!
         print("Shortcut!! Create a database 'aras_file.db' with everything above in one go!")
         print()
-        from aras_all_in_one_ import *
+        from aras_all_in_one_ import create_connection, main
         create_connection()
         main()
         print("\u001b[2J")
@@ -199,7 +199,7 @@ while True:
         print("A database called 'aras_file.db' have been created. \nVisit SQlite in your browser or in your terminal. \nYou will also find a report sent to MailHog.")
         print("http://localhost:8025/")
         input("Press enter to continue to main menu!")
-    
+
     if choice == 6:  # End this application.
         print("\u001b[2J")
         print("The application have been shut down!\n\n\n")
