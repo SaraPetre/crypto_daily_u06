@@ -139,16 +139,17 @@ def mailhog():
 
     from_addr = "aras@test.test"
     to_addr = "test@to.to"
-    subject = "Dayly report_crypto!"
+    subject = "Daily report_crypto!"
 
     msg = f"From: {from_addr}\r\nSubject: {subject}\r\nTo: {to_addr}\r\n\r\n This is a message from MailHog.py. \n Find down below the daily prices for the top10 crypto coins! \n\n {url_figlet}\n\n{url}."
     server = smtplib.SMTP("localhost:1025")
     server.sendmail(from_addr, to_addr, msg)
 
 
+print("\n\nStart creating your database with crypto info by going through the down below steps!")
 while True:
     meny()
-    choice = int(input("Please enter the nr of your choice: "))
+    choice = int(input("Please select the nr of your choice: "))
 
     if choice == 1:
         print()
