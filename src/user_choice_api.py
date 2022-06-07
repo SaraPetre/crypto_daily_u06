@@ -145,10 +145,10 @@ def mailhog():
     server = smtplib.SMTP("localhost:1025")
     server.sendmail(from_addr, to_addr, msg)
 
-
+print("\n\nStart creating your database with crypto info by going through the down below steps!")
 while True:
     meny()
-    choice = int(input("Please enter the nr of your choice: "))
+    choice = int(input("Please select the nr of your choice: "))
 
     if choice == 1:
         print()
